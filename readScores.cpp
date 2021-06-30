@@ -10,15 +10,22 @@ File name: readScores.cpp
 
 using namespace std;
 
+/**
+    Updates grade counts based on user input
+    @param A,B,C,D,F The grades counts to be updated
+*/
 void readScores(int &A, int &B, int &C, int &D, int &F);
 
 int main(){
+    //test program with starting counts of 0.
     int A=0, B=0, C=0, D=0, F=0;
     readScores(A, B, C, D, F);
+    //sequentially prints each grade count on a different line
     cout << endl << A << endl << B << endl << C << endl << D << endl << F;
     return 0;
 }
 
+//Updates grade counts based on user input
 void readScores(int &A, int &B, int &C, int &D, int &F){
     int grade;
     cout << "Enter grade (-1 to stop): ";
@@ -40,10 +47,10 @@ void readScores(int &A, int &B, int &C, int &D, int &F){
             F++;
         }
         else if (grade<0){
-            cout << "Invalid, try again\n";
+            cout << "Invalid and less than 0, try again\n";
         }
         else {
-            cout << "Something went wrong, try again\n";
+            cout << "Something went very wrong, try again\n";
         }
         cout << "Enter grade (-1 to stop): ";
         cin >> grade;
