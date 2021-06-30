@@ -15,6 +15,7 @@ using namespace std;
 bool CheckAgainstPasswordRules(string password);
 
 int main(){
+    //test cases for each condition
     cout << CheckAgainstPasswordRules("ERFGergeaREG32423#@$#@") << endl;
     cout << CheckAgainstPasswordRules("ERFGergeaREG32423") << endl;
     cout << CheckAgainstPasswordRules("erfgergeareg32423#@$#@") << endl;
@@ -26,13 +27,17 @@ int main(){
 }
 
 bool CheckAgainstPasswordRules(string password){
+    //create conditions to be met
     bool lengthMet = false;
     bool uppercaseMet = false;
     bool lowercaseMet = false;
     bool specialcharMet = false;
     bool nospacesMet = true;
     
+    //set length condition
     lengthMet = password.length()>=8;
+    
+    //loop through the string to set the rest of the conditions
     for (int i=0; i<password.length(); i++){
         if (isupper(password[i])){
             uppercaseMet = true;
@@ -47,6 +52,8 @@ bool CheckAgainstPasswordRules(string password){
             specialcharMet = true;
         }
     }
+    
+    //true if all the conditions are met
     return lengthMet && uppercaseMet && lowercaseMet && specialcharMet && nospacesMet;
 
 }
