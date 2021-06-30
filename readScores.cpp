@@ -27,6 +27,7 @@ int main(){
 
 //Updates grade counts based on user input
 void readScores(int &A, int &B, int &C, int &D, int &F){
+    int A=0, B=0, C=0, D=0, F=0;
     int grade;
     cout << "Enter grade (-1 to stop): ";
     cin >> grade;
