@@ -11,6 +11,11 @@ File name: isComment.cpp
 
 using namespace std;
 
+/**
+    Returns whether inputted string is a comment or not
+    @param text The string to be evaluated
+    @return Whether it is a comment or not
+*/
 bool isComment (string text);
 
 int main (){
@@ -23,6 +28,7 @@ int main (){
   cout << isComment("/") << endl;
 }
 
+//Returns whether inputted string is a comment or not
 bool isComment(string text) {
   /* check for valid comment */
   
