@@ -12,6 +12,11 @@ File name: CheckAgainstPasswordRules.cpp
 
 using namespace std;
 
+/**
+    Returns whether an inputted password meets rules or not
+    @param password The password to be checked
+    @return whether the password is valid or not
+*/
 bool CheckAgainstPasswordRules(string password);
 
 int main(){
@@ -26,7 +31,8 @@ int main(){
     return 0;
 }
 
-bool CheckAgainstPasswordRules(string password){
+//Returns whether an inputted password meets rules or not
+bool CheckAgainstPasswordRules(string password){ 
     //create conditions to be met
     bool lengthMet = false;
     bool uppercaseMet = false;
