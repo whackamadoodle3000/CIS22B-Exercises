@@ -14,6 +14,7 @@ using namespace std;
 bool isComment (string text);
 
 int main (){
+  //test isComment for various cases
   cout << isComment("//globgogabgalab") << endl;
   cout << isComment(" //globgogabgalab") << endl;
   cout << isComment(" / /globgogabgalab") << endl;
@@ -22,12 +23,17 @@ int main (){
   cout << isComment("/") << endl;
 }
 
-bool isComment (string text) {
+bool isComment(string text) {
+  /* check for valid comment */
+  
+  //find index of first non-space
   int currentCharIndex = 0;
   while (text[currentCharIndex] == ' '){
       currentCharIndex++;
   }
   
+  //check if first two non-space chars are /
+  //short circuits to false for inputs too small to prevent errors
   return text.length () > 1 && text[currentCharIndex] == '/'
     && text[currentCharIndex + 1] == '/';
 }
