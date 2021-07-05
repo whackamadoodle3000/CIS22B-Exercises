@@ -61,7 +61,7 @@ int main(){
     pointer = getNumList(3);
     
     for (int i=0; i<3; i++, pointer++){
-        cout << *(&pointer) << ",";
+        cout << (*pointer) << ",";
     }
     cout << endl << endl;
     
@@ -104,7 +104,7 @@ int reverseCase(char letters[]){
 }
 
 int* getNumList(int size){
-    int numlist[size];
+    int* numlist = new int[size];
     int* pointer = numlist;
     int tempNum;
     for (int i = 0; i<size; i++, pointer++){
