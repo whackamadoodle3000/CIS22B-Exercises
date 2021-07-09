@@ -1,5 +1,6 @@
 /******************************************************************************
-CIS22B Print a square with certain dimensions
+CIS22B Print a square with certain dimes
+nsions
 File name: printSquare.cpp
 @author Pranav Tadepalli
 @version 1.0 
